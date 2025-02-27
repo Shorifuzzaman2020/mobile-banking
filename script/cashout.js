@@ -1,7 +1,6 @@
-
-document.getElementById('add-money').addEventListener('click',function(event){
+document.getElementById('cash-out-button').addEventListener('click',function(event){
     event.preventDefault();
-    const amount=document.getElementById('amount').value;
+    const amount=document.getElementById('cash-out-amount').value;
     const convertedAmount=parseFloat(amount);
     const pinNumber=document.getElementById('pin').value;
     const mainBalance=document.getElementById('balance').innerText;
@@ -9,8 +8,8 @@ document.getElementById('add-money').addEventListener('click',function(event){
 
     if(amount && pinNumber){
         if(pinNumber==="12345"){
-            const sum=convertedMainBalance+convertedAmount;
-            document.getElementById('balance').innerText=sum;
+            const sub=convertedMainBalance-convertedAmount;
+            document.getElementById('balance').innerText=sub;
         }
         else{
             alert("Wrong pin");
