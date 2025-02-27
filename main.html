@@ -18,7 +18,7 @@
                     <p class="border rounded p-2">Available Balance</p>
                 </div>
                 </div>
-                <button class="btn">Logout</button>
+                <button class="btn bg-blue-700 text-white">Logout</button>
             </nav>
         </header>
         <section class="mt-10">
@@ -46,7 +46,7 @@
                     <img class="w-8 mx-auto" src="./assets/bonus1.png" alt="">
                     <h3>Get Bonus</h3>
                 </div>
-                <div class="box cursor-pointer border border-gray-500 p-4 text-center rounded-sm">
+                <div id="transaction-box" class="box cursor-pointer border border-gray-500 p-4 text-center rounded-sm">
                     <img class="w-8 mx-auto" src="./assets/transaction1.png" alt="">
                     <h3>Transaction History</h3>
                 </div>
@@ -60,7 +60,7 @@
                   <div class="card w-full max-w-sm shrink-0 shadow-2xl">
                     <form class="card-body">
                         <legend>Select Bank</legend>
-                        <select class="select select-bordered w-full max-w-xs">
+                        <select id="all-banks" class="select select-bordered w-full max-w-xs">
                             <option disabled selected>Please Select a Bank</option>
                             <option value="bkash">bkash</option>
                             <option value="Nagad">Nagad</option>
@@ -132,9 +132,17 @@
                 </div>
               </div>
         </section>
+        <section id="transaction">
+            <h1 class="ml-10">Transaction History</h1>
+            <div id="transaction-container">
+
+            </div>
+        </section>
     </section>
-    <script src="./script/add-money.js"></script>
+    <script src="./script/add-money-new.js"></script>
     <script src="./script/toogle.js"></script>
     <script src="./script/cashout.js"></script>
+    <script src="./utilities/utilities.js"></script>
+    <script src="./script/transaction.js"></script>
 </body>
 </html>
